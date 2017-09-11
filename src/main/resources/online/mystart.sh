@@ -1,3 +1,0 @@
-nohup bin/flume-ng agent --conf conf -f conf/myconf/creg.conf -n creg_agent -Dflume.log.file=creg_agent.log > creg_agent.log 2>&1 &
-nohup bin/flume-ng agent --conf conf -f conf/myconf/cpaymentdetails.conf -n cpaymentdetails_agent -Dflume.log.file=cpaymentdetails_agent.log > cpaymentdetails_agent.log 2>&1 &
-nohup bin/flume-ng agent --conf conf -f conf/myconf/cpaymentdetails_del.conf -n cpaymentdetails_del_agent -Dflume.log.file=cpaymentdetails_del_agent.log > cpaymentdetails_del_agent.log 2>&1 &
