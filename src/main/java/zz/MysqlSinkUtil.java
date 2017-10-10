@@ -12,9 +12,19 @@ public class MysqlSinkUtil {
         String values = "";
         for (int i = 1; i < s.length; i++) {
             if (i == s.length - 1) {
-                values += "\"" + s[i] + "\"";
+                if (s[i].startsWith("\"") && s[i].endsWith("\"")) {
+                    values += s[i];
+                } else {
+                    values += "\"" + s[i] + "\"";
+                }
+
             } else {
-                values += "\"" + s[i] + "\"" + ",";
+                if (s[i].startsWith("\"") && s[i].endsWith("\"")) {
+                    values += s[i] + ",";
+                } else {
+                    values += "\"" + s[i] + "\"" + ",";
+                }
+
             }
 
         }
